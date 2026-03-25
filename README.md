@@ -124,7 +124,7 @@ to=PST
 ### 1️⃣ Clone Project
 
 ```
-git clone <your-repo-url>
+git clone <https://github.com/Ram0718/ConvertersHub>
 ```
 
 ### 2️⃣ Open in IDE
