@@ -40,7 +40,7 @@ public class TimeService {
     	 String fr=ZONE_MAP.getOrDefault(from.toUpperCase(), from);
     	 String too=ZONE_MAP.getOrDefault(to.toUpperCase(), to);
     	 ZonedDateTime sourceTime=ZonedDateTime.now(ZoneId.of(fr));
-    	 ZonedDateTime targTime=ZonedDateTime.now(ZoneId.of(too));
+    	 ZonedDateTime targTime=sourceTime.withZoneSameInstant(ZoneId.of(too));
     	 return targTime.toString();
      }
 }
