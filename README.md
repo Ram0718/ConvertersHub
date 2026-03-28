@@ -119,6 +119,29 @@ to=PST
 
 ---
 
+## 🖥️ Frontend (Standalone)
+
+A simple UIs for your API are in `frontend/`:
+
+- `frontend/index.html`
+- `frontend/style.css`
+- `frontend/app.js`
+
+### Run
+
+1. Start backend: `mvn spring-boot:run`
+2. Open `frontend/index.html` directly in browser or serve with `npx serve frontend`
+3. Ensure backend URL in `app.js`: `http://localhost:8080`
+
+### Features
+
+- Length/weight/volume conversion with POST to `/convert/{length|weight|volum}`
+- Data conversion GET `/data/{mb-to-gb|gb-to-tb|mb-to-tb}/{value}`
+- Timezone conversion POST `/time/timezone?from=UTC&to=IST`
+
+> If browser blocks local file CORS, use a static server: `python -m http.server 5500` or `npx serve frontend`. 
+
+
 ## ▶️ How to Run
 
 ### 1️⃣ Clone Project
