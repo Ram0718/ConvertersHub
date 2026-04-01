@@ -25,7 +25,7 @@ public class ConvertingController {
     public double convertWeight(@RequestBody ConverterModel cm) {
     	return cs.convertWight(cm.getValue(),cm.getFrom(), cm.getTo());
     }
-    @PostMapping("/volum")
+    @PostMapping("/volume")
     public double convertVolume(@RequestBody ConverterModel cm) {
     	return cs.convertVolume(cm.getValue(), cm.getFrom(), cm.getTo());
     }
