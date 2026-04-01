@@ -1,5 +1,5 @@
 # Build stage
-FROM maven:3.8.1-openjdk-11 AS builder
+FROM maven:3.9.7-eclipse-temurin-17 AS builder
 WORKDIR /app
 COPY pom.xml .
 RUN mvn dependency:go-offline
@@ -8,7 +8,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Runtime stage
-FROM eclipse-temurin:11-jre-slim
+FROM eclipse-temurin:17-jre
 WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
 
